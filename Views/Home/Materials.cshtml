@@ -1,0 +1,54 @@
+﻿@model List<FileModel>
+@{
+    ViewData["Title"] = "Матеріали";
+}
+
+<link rel="stylesheet" href="~/css/material.css" asp-append-version="true" />
+
+<div class="wrapper">
+
+    <h1 class="seymour-one-regular">Методичні матеріали</h1>
+
+
+
+    <div class="files-panel">
+
+        <form class="select-form" method="post" asp-action="Filter" asp-controller="Home">
+            <select name="type">
+                <option value="1">Модуль 1</option>
+                <option value="2">Модуль 2</option>
+                <option value="3">Модуль 3</option>
+                <option value="4">Модуль 4</option>
+                <option value="rest">Інше</option>
+            </select>
+            <button type="submit"><p>Застосувати</p></button>
+        </form>
+
+        <div class="files-list">
+
+            <center><h3>@ViewData["select"]</h3></center>
+            <br />
+
+            @if (Model.Count == 0)
+            {
+                <h3>Викладачі ще не додавали файли</h3>
+            }
+            else
+            {
+
+            }
+
+            @foreach (FileModel file in Model)
+            {
+                <div class="file-elem">
+                    <a class="filename" href="@file.FilePath" download><b>@file.WorkType:</b> @file.Filename</a>
+                </div>
+            }
+
+        </div>
+
+    </div>
+
+
+</div>
+

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - АК</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/ArchSite.styles.css" asp-append-version="true" />
+</head>
+
+
+<body style="display: flex; flex-direction: column; justify-content: flex-start; width: 100%;">
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <header>
+        <div class="nav-container">
+
+            <div class="nav-1">
+                <a href="@Url.Action("Home","Home")">Головна</a>
+                <a href="@Url.Action("Plan", "Home")">План дисципліни</a>
+            </div>
+
+            <div class="nav-2" style="justify-content: flex-end;">
+                <a href="@Url.Action("Materials", "Home")">Методичні матеріали</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    @RenderBody()
+
+    <br />
+    <footer style="background: transparent;">
+        <div class="footer-line" style="background: transparent;">
+            <p>&copy; 2024 - Комп'ютерна архітектура</p>
+            <a href="javascript:void(0)" id="adminLink" style="color: black;">Адміністрування</a>
+        </div>
+        <form id="adminForm" method="post" asp-action="EnterAdmin" asp-controller="Admin" style="display: none">
+            <input type="password" name="pass" required autocomplete="off" placeholder="Пароль" />
+            <button type="submit">Увійти</button>
+        </form>
+    </footer>
+
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    
+    <script>
+        /*document.getElementById("adminLink").addEventListener("click", function (event) {
+            event.preventDefault(); // Остановить переход по ссылке
+            document.getElementById("adminForm").style.display = "flex";
+        });*/
+
+
+            document.getElementById("adminLink").addEventListener("click", function (event) {
+                event.preventDefault(); // Остановить стандартное действие ссылки
+
+                // Функция для получения значения cookie по его имени
+                function getCookie(name) {
+                    let value = "; " + document.cookie;
+                    let parts = value.split("; " + name + "=");
+                    if (parts.length == 2) return parts.pop().split(";").shift();
+                }
+
+                // Проверка значения cookie "adm"
+                if (getCookie("adm") === "true") {
+                    console.log("Cookie 'adm' is true, redirecting to AdminPage...");
+                    // Перенаправление на URL, если значение cookie "adm" равно "true"
+                    window.location.href = "@Url.Action("AdminPage", "Admin")";
+                } else {
+                    console.log("Cookie 'adm' is not true or does not exist, showing admin form...");
+                    // Показать форму
+                    document.getElementById("adminForm").style.display = "flex";
+                }
+            });
+
+    </script>
+
+</body>
+
+
+
+</html>

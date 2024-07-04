@@ -1,0 +1,117 @@
+﻿
+.wrapper{
+    user-select: initial;
+}
+.wrapper h1 {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    background: linear-gradient(transparent, rgba(255,255,255,.7));
+    text-shadow: 0 0 60px green;
+    overflow: hidden;
+    cursor: default;
+    user-select: none;
+    animation: anim-h1-plan linear infinite 3s;
+    border: 3px solid transparent;
+    padding: 10px;
+}
+
+.files-panel {
+    width: 95%;
+    background: rgba(0,0,0,.3);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+}
+.files-panel {
+    width: 95%;
+    background: rgba(255,255,255,.3);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    border: 1px solid black;
+}
+
+    .files-panel .select-form {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        border-bottom: 2px dashed black;
+        padding-bottom: 10px;
+    }
+    .files-panel .select-form h2{
+        justify-self: left;
+        width: 100%;
+        padding: 10px;
+    }
+
+        .files-panel .select-form select {
+            z-index: 100;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+            user-select: initial;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+            background: silver;
+            color: black;
+            height: 50px;
+            width: 25%;
+        }
+
+        .files-panel .select-form option {
+            background: silver;
+            color: black;
+            border-radius: 10px;
+        }
+
+        .files-panel .select-form button {
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+            height: 50px;
+            width: 25%;
+            margin-left: 10px;
+        }
+
+            .files-panel .select-form button p {
+                padding: 0;
+                margin: 0;
+                font-weight: bold;
+            }
+
+.files-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.files-list .file-elem{
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+.files-list .file-elem a{
+    text-decoration: none;
+    color: rgba(0,0,0,.6);
+    cursor: pointer;
+
+    &:hover{
+               color: green;
+               text-shadow: 0 1px 5px silver;
+           }
+}

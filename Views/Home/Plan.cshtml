@@ -1,0 +1,46 @@
+﻿@model List<ModuleInfoModel>
+@{
+    ViewData["Title"] = "План";
+}
+
+<link rel="stylesheet" href="~/css/plan.css" asp-append-version="true" />
+
+<div class="wrapper">
+    <h1 class="seymour-one-regular">План дисципліни</h1>
+
+    @foreach (ModuleInfoModel module in Model)
+    {
+        <div class="module">
+
+            <div class="module-name" onclick="toggleThemes(this)">
+                <div>@module.module_name</div><div>▼</div>
+            </div>
+
+            <div class="module-themes">
+                @foreach(string theme in module.themes)
+                {
+                    <p class="lxgw-wenkai-mono-tc-regular">@theme</p>
+                }
+            </div>
+
+        </div>
+    }
+
+</div>
+
+<script>
+    //  розгортання / згортання
+    function toggleThemes(moduleName) {
+        var themes = moduleName.nextElementSibling;
+
+        if (themes.classList.contains('active')) {
+            themes.classList.remove('active');
+            themes.classList.add('inactive');
+        }
+        else{
+            themes.classList.remove('inactive');
+            themes.classList.add('active');
+        }
+    }
+
+</script>

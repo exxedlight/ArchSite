@@ -1,0 +1,90 @@
+﻿.files-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+    .files-list .file-elem {
+        padding: 3px;
+    }
+
+        .files-list .file-elem a {
+            text-decoration: none;
+            color: rgba(0,0,0,.6);
+            cursor: pointer;
+            &:hover
+
+{
+    color: green;
+    text-shadow: 0 1px 5px silver;
+}
+
+}
+
+
+
+
+
+.wrapper .add-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.5);
+    border: 1px solid black;
+    width: 50%;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.add-form h4 {
+    text-align: left;
+    text-decoration: underline;
+}
+.add-form input, form select, form button {
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+}
+.add-form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+.add-form button p {
+    margin: 0;
+}
+.add-form button:hover {
+    background: rgba(0,220,0,.5);
+}
+
+.close-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: 2px solid black;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.file-elem{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 2px;
+}
+    .file-elem .filename{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 30px;
+    }
+    .close-btn:hover {
+        box-shadow: 0 0 10px red;
+        text-shadow: 0 0 10px red;
+    }

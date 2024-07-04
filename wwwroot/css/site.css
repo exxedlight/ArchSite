@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap');
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+    html::-webkit-scrollbar {
+        display: none;
+    }
+
+body {
+    margin-bottom: 60px;
+    background: rgba(0,0,0,.1);
+}
+
+
+
+
+.seymour-one-regular {
+    font-family: "Seymour One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lxgw-wenkai-mono-tc-regular {
+    font-family: "LXGW WenKai Mono TC", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.footer-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+footer{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+}
+#adminForm {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    align-self: flex-end;
+}
+
+    #adminForm input {
+        margin-bottom: 5px;
+        padding: 3px;
+        border-radius: 10px;
+    }
+    #adminForm button {
+        border-radius: 10px;
+    }
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
+    color: white;
+    border-bottom: 2px solid rgba(255,255,255,.5);
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    vertical-align: central;
+    background: rgba(255,255,255,.2);
+    width: 95%;
+    align-self: center;
+    border-radius: 20px;
+    margin: 10px 0 10px 0;
+}
+
+.nav-1 {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.nav-2 {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-right: 10px;
+    border-left: 5px solid black;
+}
+
+    .nav-1 a, .nav-2 a {
+        text-decoration: none;
+        color: silver;
+        margin-right: 15px;
+        &:hover
+
+{
+    text-shadow: 0 0 5px lime;
+}
+
+&:active {
+    text-shadow: 0 0 10px green;
+    color: white;
+}
+
+}
+
+
+.wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    min-height: 100vh;
+}
+
+    .wrapper::before {
+        z-index: -2;
+        content: '';
+        position: fixed;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100%;
+        background: url('/img/plate2.jpg');
+        background-size: auto;
+        background-position: center;
+        background-clip: content-box;
+        top: 0;
+        left: 0;
+        opacity: .25;
+        animation: back-move linear infinite 5s;
+    }
+
+@keyframes back-move {
+    0% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes h1-anim2 {
+    0% {
+        transform: translateY(-100vw);
+    }
+
+    80% {
+        transform: translateY(0vw);
+    }
+
+    100% {
+        transform: translateY(10vw);
+    }
+}
+
+@keyframes anim-h1-plan {
+    0% {
+        border-bottom: 3px solid black;
+    }
+
+    25% {
+        border-right: 3px solid black;
+    }
+
+    50% {
+        border-top: 3px solid black;
+    }
+
+    75% {
+        border-left: 3px solid black;
+    }
+
+    100% {
+        border: 3px solid rgba(0,255,0,.5);
+    }
+}
+
+@keyframes down {
+    0% {
+        max-height: 0px;
+    }
+
+    100% {
+        max-height: 1000px;
+    }
+}
+
+@keyframes up {
+    0% {
+        max-height: 1000px;
+        transform: scaleY(1.0) rotate(0);
+    }
+
+    100% {
+        max-height: 0px;
+        transform: scaleY(0) rotate(180deg);
+        display: none;
+    }
+}

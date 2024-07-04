@@ -1,0 +1,138 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+
+.seymour-one-regular {
+    font-family: "Seymour One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.wrapper h1 {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    background: linear-gradient(transparent, rgba(0,0,0,.2));
+    overflow: hidden;
+    cursor: default;
+    user-select: none;
+    padding: 10px;
+}
+
+    .wrapper h1::after {
+        padding-left: 1px;
+        padding-right: 1px;
+        z-index: -1;
+        content: '01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001 01000111 01101111 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00100000 01101110 01100001 01101000 01110101 01101001 00100001';
+        white-space: pre-wrap;
+        word-wrap: anywhere;
+        width: 100%;
+        font-weight: bold;
+        font-family: Consolas;
+        color: rgba(31, 143, 23, 1);
+        transform: rotate(45deg);
+        opacity: .1;
+        height: 120%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 20px;
+        animation: h1-anim2 both 20s infinite;
+    }
+
+
+
+.info-block {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    background: rgba(30, 98, 7, .5);
+    background-size: cover;
+    width: 95%;
+}
+
+    .info-block::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background-image: url('/img/plate.jpg');
+        background-size: cover;
+        opacity: .45;
+    }
+
+    .info-block h4 {
+        color: rgba(0,0,0,1.5);
+        font-size: 27px;
+        font-weight: bolder;
+        text-align: left;
+        text-decoration: underline;
+        padding: 3px;
+        padding-left: 10%;
+        background: rgba(255,255,255,.3);
+        border-radius: 10px;
+    }
+
+    .info-block text {
+        display: flex;
+        flex-direction: column;
+        padding: 3px;
+        color: black;
+        font-weight: bolder;
+        cursor: default;
+        user-select: none;
+        background: rgba(255,255,255,.2);
+        border-radius: 10px;
+        overflow-wrap: break-word;
+        flex-wrap: wrap;
+    }
+
+
+
+.person-block {
+    width: 95%;
+    padding: 20px;
+    border: 1px solid black;
+    background-image: url('/img/plate.jpg');
+    background-size: contain;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    height: min-content;
+}
+
+    .person-block img {
+        width: 30%;
+        height: 300px;
+        max-height: 400px;
+        background: silver;
+        background-image: url('/imgdata/efimec.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 20px;
+        border: 3px solid black;
+        position: relative;
+    }
+
+    .person-block .about-person {
+        padding: 20px;
+        backdrop-filter: brightness(.1);
+        margin-left: 10px;
+        border-radius: 20px;
+        border: 3px solid rgb(49, 255, 0, .5);
+        color: silver;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
